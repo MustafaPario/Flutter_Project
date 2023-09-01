@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:smit_project/widgets/slidercontiner.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -119,7 +120,21 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
 
-          // Section potion
+          // Section protion
+
+          Padding(
+            padding: const EdgeInsets.only(left: 25, top: 20),
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  customSlider(),
+                  customSlider(),
+                  customSlider(),
+                ],
+              ),
+            ),
+          )
         ],
       ),
     );
