@@ -23,20 +23,26 @@ class _ScreenOneState extends State<ScreenOne> {
           children: [
             Text(
               'Your holiday',
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.w700),
+              style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.w700,
+                  color: Color(0xFFFAFBFD)),
             ),
             SizedBox(height: 8),
             Text(
               'shopping',
               style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.w700,
-              ),
+                  fontSize: 30,
+                  fontWeight: FontWeight.w700,
+                  color: Color(0xFFFAFBFD)),
             ),
             SizedBox(height: 8),
             Text(
               'delivered to Screen',
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.w700),
+              style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.w700,
+                  color: Color(0xFFFAFBFD)),
             ),
             SizedBox(height: 8),
             Row(
@@ -46,9 +52,9 @@ class _ScreenOneState extends State<ScreenOne> {
                   child: Text(
                     'one',
                     style: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.w700,
-                    ),
+                        fontSize: 30,
+                        fontWeight: FontWeight.w700,
+                        color: Color(0xFFFAFBFD)),
                   ),
                 ),
                 Image.asset('assets/images/Emoji.png')
@@ -58,16 +64,25 @@ class _ScreenOneState extends State<ScreenOne> {
               padding: const EdgeInsets.only(top: 25),
               child: Text(
                 'There are something for everyone',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w500,
+                    color: Color(0xFFB2BBCE)),
               ),
             ),
             Text(
               'to enjoy with Sweet Shop',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+              style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500,
+                  color: Color(0xFFB2BBCE)),
             ),
             Text(
               'Favourites Screen 1',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+              style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500,
+                  color: Color(0xFFB2BBCE)),
             ),
             Padding(
               padding: const EdgeInsets.only(top: 25),
@@ -76,18 +91,18 @@ class _ScreenOneState extends State<ScreenOne> {
                   Padding(
                     padding: const EdgeInsets.only(right: 10),
                     child: Container(
-                      width: 20,
-                      height: 2,
+                      width: 34,
+                      height: 3,
                       decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(50)),
                     ),
                   ),
                   Container(
-                    width: 34,
-                    height: 3,
+                    width: 20,
+                    height: 2,
                     decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: Color(0xFFB2BBCE),
                         borderRadius: BorderRadius.circular(50)),
                   ),
                 ],
@@ -126,7 +141,7 @@ class _ScreenOneState extends State<ScreenOne> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'Get Started',
+                        'Next',
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Colors.black,

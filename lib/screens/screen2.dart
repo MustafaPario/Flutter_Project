@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smit_project/screens/home.dart';
 
 class ScreenTwo extends StatefulWidget {
   const ScreenTwo({super.key});
@@ -10,7 +11,8 @@ class ScreenTwo extends StatefulWidget {
 class _ScreenTwoState extends State<ScreenTwo> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Scaffold(
+        body: Container(
       width: double.infinity,
       height: double.infinity,
       color: Color(0xFF2A4BA0),
@@ -20,22 +22,27 @@ class _ScreenTwoState extends State<ScreenTwo> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              'Your holiday',
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.w700),
-            ),
+            Text('Your holiday',
+                style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.w700,
+                  color: Color(0xFFFAFBFD),
+                )),
             SizedBox(height: 8),
             Text(
               'shopping',
               style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.w700,
-              ),
+                  fontSize: 30,
+                  fontWeight: FontWeight.w700,
+                  color: Color(0xFFFAFBFD)),
             ),
             SizedBox(height: 8),
             Text(
               'delivered to Screen',
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.w700),
+              style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.w700,
+                  color: Color(0xFFFAFBFD)),
             ),
             SizedBox(height: 8),
             Row(
@@ -45,9 +52,9 @@ class _ScreenTwoState extends State<ScreenTwo> {
                   child: Text(
                     'Two',
                     style: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.w700,
-                    ),
+                        fontSize: 30,
+                        fontWeight: FontWeight.w700,
+                        color: Color(0xFFFAFBFD)),
                   ),
                 ),
                 Image.asset('assets/images/Emoji.png')
@@ -57,16 +64,25 @@ class _ScreenTwoState extends State<ScreenTwo> {
               padding: const EdgeInsets.only(top: 25),
               child: Text(
                 'There are something for everyone',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w500,
+                    color: Color(0xFFB2BBCE)),
               ),
             ),
             Text(
               'to enjoy with Sweet Shop',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+              style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500,
+                  color: Color(0xFFB2BBCE)),
             ),
             Text(
-              'Favourites Screen 1',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+              'Favourites Screen 2',
+              style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500,
+                  color: Color(0xFFB2BBCE)),
             ),
             Padding(
               padding: const EdgeInsets.only(top: 25),
@@ -78,7 +94,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
                       width: 20,
                       height: 2,
                       decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: Color(0xFFB2BBCE),
                           borderRadius: BorderRadius.circular(50)),
                     ),
                   ),
@@ -96,16 +112,17 @@ class _ScreenTwoState extends State<ScreenTwo> {
               padding: const EdgeInsets.only(top: 30, bottom: 30),
               child: Center(
                 child: Image.asset(
-                  "assets/images/delivery.png",
-                  width: 130,
-                  height: 130,
+                  "assets/images/delivery1.png",
+                  width: 150,
+                  height: 150,
                 ),
               ),
             ),
             Center(
-              child: GestureDetector(
-                onTap: () {
-                  ;
+              child: TextButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (cpntext) => HomeScreen()));
                 },
                 child: Container(
                   width: 255,
@@ -115,20 +132,26 @@ class _ScreenTwoState extends State<ScreenTwo> {
                       borderRadius: BorderRadius.circular(15),
                       boxShadow: [
                         BoxShadow(
-                            color: Colors.white,
-                            spreadRadius: .5,
-                            blurRadius: 2,
-                            offset: Offset(1, 4)),
-                        BoxShadow(
-                            color: const Color.fromARGB(255, 246, 246, 246),
-                            spreadRadius: .5,
-                            blurRadius: 2),
+                            color: Colors.white24,
+                            spreadRadius: 1,
+                            blurRadius: 3,
+                            offset: Offset(0, 4)),
                       ]),
-                  child: Center(
-                    child: Text(
-                      'button',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Get Started',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black,
+                            fontSize: 16),
+                      ),
+                      Icon(
+                        Icons.arrow_right_sharp,
+                        color: Colors.black,
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -136,7 +159,6 @@ class _ScreenTwoState extends State<ScreenTwo> {
           ],
         ),
       ),
-    );
-    ;
+    ));
   }
 }
