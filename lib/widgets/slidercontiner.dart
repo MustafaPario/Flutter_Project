@@ -7,7 +7,9 @@ class customSlider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(right: 15),
+      margin: EdgeInsets.only(
+        right: 15,
+      ),
       width: 300,
       height: 120,
       decoration: BoxDecoration(
@@ -18,7 +20,7 @@ class customSlider extends StatelessWidget {
           Image.network(
             "https://images.unsplash.com/photo-1627384113743-6bd5a479fffd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cHJvZHVjdHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=400&q=60",
             width: 100,
-            height: 110,
+            height: 100,
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -28,7 +30,7 @@ class customSlider extends StatelessWidget {
                 'Get',
                 style: TextStyle(
                     fontSize: 20,
-                    fontWeight: FontWeight.w200,
+                    fontWeight: FontWeight.w100,
                     color: Color(0xFFFAFBFD)),
               ),
               SizedBox(
@@ -47,7 +49,7 @@ class customSlider extends StatelessWidget {
               Text(
                 'On first 03 orders',
                 style: TextStyle(
-                    fontWeight: FontWeight.w500,
+                    fontWeight: FontWeight.w100,
                     fontSize: 13,
                     color: Color(0xFFFAFBFD)),
               ),

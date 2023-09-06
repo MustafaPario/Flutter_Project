@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:smit_project/widgets/product_container.dart';
 import 'package:smit_project/widgets/slidercontiner.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -14,6 +15,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
             width: double.infinity,
@@ -123,18 +125,41 @@ class _HomeScreenState extends State<HomeScreen> {
           // Section protion
 
           Padding(
-            padding: const EdgeInsets.only(left: 25, top: 20),
+            padding: const EdgeInsets.only(left: 25, top: 20, bottom: 20),
             child: SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
                   customSlider(),
                   customSlider(),
-                  customSlider(),
                 ],
               ),
             ),
-          )
+          ),
+
+          Padding(
+            padding: const EdgeInsets.only(right: 25, left: 25, bottom: 20),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Text(
+                  'Recommended',
+                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.w400),
+                ),
+                SizedBox(
+                  height: 7,
+                ),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      ProductContainer(),
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ),
         ],
       ),
     );
